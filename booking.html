@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Table - Food Lover</title>
+    <link rel="stylesheet" href="Css/Restaurant.css">
+    <link rel="stylesheet" href="Css/booking.css">
+    <link rel="icon" href="img/restaurant logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <header id="home">
+        <div class="navbar">
+            <img class="logo" src="img/logo.png" alt="">
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="Restaurant web.html#home">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="booking.html" class="active">Booking</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="#" id="logoutBtn">Logout</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon-container">
+                <a href="products.html#cart" class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Welcome to <span>Food Lover </span>Restaurant</h1>
+            <p>
+                Here you can find most delicious food in the world
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="booking-section">
+            <div class="container">
+                <h2 class="section-title">Book a Table</h2>
+                <div class="booking-content">
+                    <div class="booking-form-container">
+                        <form id="bookingForm" class="booking-form">
+                            <div class="form-group">
+                                <label for="bookingDate"><i class="fa-solid fa-calendar"></i> Date</label>
+                                <input type="date" id="bookingDate" name="bookingDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bookingTime"><i class="fa-solid fa-clock"></i> Time</label>
+                                <select id="bookingTime" name="bookingTime" required>
+                                    <option value="">Select Time</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="13:00">1:00 PM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="15:00">3:00 PM</option>
+                                    <option value="18:00">6:00 PM</option>
+                                    <option value="19:00">7:00 PM</option>
+                                    <option value="20:00">8:00 PM</option>
+                                    <option value="21:00">9:00 PM</option>
+                                    <option value="22:00">10:00 PM</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests"><i class="fa-solid fa-users"></i> Number of Guests</label>
+                                <input type="number" id="guests" name="guests" min="1" max="20" required placeholder="Number of guests">
+                            </div>
+                            <div class="form-group">
+                                <label for="tableType"><i class="fa-solid fa-chair"></i> Table Type</label>
+                                <select id="tableType" name="tableType" required>
+                                    <option value="">Select Table Type</option>
+                                    <option value="standard">Standard (2-4 guests)</option>
+                                    <option value="large">Large (5-8 guests)</option>
+                                    <option value="vip">VIP (9+ guests)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="specialRequests"><i class="fa-solid fa-comment"></i> Special Requests (Optional)</label>
+                                <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Any special requests or notes..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-booking">Book Table</button>
+                        </form>
+                    </div>
+
+                    <div class="booking-info">
+                        <div class="info-card">
+                            <h3><i class="fa-solid fa-info-circle"></i> Booking Information</h3>
+                            <ul>
+                                <li>You can book up to 7 days in advance</li>
+                                <li>Minimum booking time: 1 hour before selected time</li>
+                                <li>For cancellations, please cancel at least 24 hours in advance</li>
+                                <li>Bookings available from 12:00 PM to 11:00 PM</li>
+                            </ul>
+                        </div>
+                        <div class="info-card">
+                            <h3><i class="fa-solid fa-clock"></i> Working Hours</h3>
+                            <ul>
+                                <li><strong>Breakfast:</strong> 4:00 AM - 7:00 PM</li>
+                                <li><strong>Lunch:</strong> 8:00 AM - 10:00 PM</li>
+                                <li><strong>Dinner:</strong> 9:00 PM - 1:00 AM</li>
+                                <li><strong>Dessert:</strong> All day</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Bookings Section -->
+        <section id="myBookings" class="my-bookings-section">
+            <div class="container">
+                <h2 class="section-title">My Bookings</h2>
+                <div class="bookings-list" id="bookingsList">
+                    <p class="empty-bookings">No previous bookings</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>CopyRight &copy; All rights reserved | Made by
+            <a href="#">Eng.Seif El-deen</a>
+        </p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/booking.js"></script>
+</body>
+
+</html>

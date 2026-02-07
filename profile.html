@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Food Lover</title>
+    <link rel="stylesheet" href="Css/Restaurant.css">
+    <link rel="stylesheet" href="Css/profile.css">
+    <link rel="icon" href="img/restaurant logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <header id="home">
+        <div class="navbar">
+            <img class="logo" src="img/logo.png" alt="">
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="Restaurant web.html#home">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="profile.html" class="active">Profile</a></li>
+                    <li><a href="#" id="logoutBtn">Logout</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon-container">
+                <a href="products.html#cart" class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Welcome to <span>Food Lover </span>Restaurant</h1>
+            <p>
+                Here you can find most delicious food in the world
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="profile-section">
+            <div class="container">
+                <h2 class="section-title">My Profile</h2>
+                <div class="profile-content">
+                    <div class="profile-card">
+                        <div class="profile-header">
+                            <div class="profile-avatar">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <h3 id="userName">Name</h3>
+                            <p id="userEmail">Email</p>
+                        </div>
+                        <div class="profile-info">
+                            <div class="info-item">
+                                <i class="fa-solid fa-envelope"></i>
+                                <div>
+                                    <span class="label">Email</span>
+                                    <span class="value" id="displayEmail">-</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <div>
+                                    <span class="label">Phone</span>
+                                    <span class="value" id="displayPhone">-</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fa-solid fa-calendar"></i>
+                                <div>
+                                    <span class="label">Registration Date</span>
+                                    <span class="value" id="registerDate">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-actions">
+                        <div class="action-card">
+                            <i class="fa-solid fa-shopping-bag"></i>
+                            <h4>My Orders</h4>
+                            <p id="ordersCount">0 orders</p>
+                            <a href="products.html#orders" class="btn-action">View Orders</a>
+                        </div>
+                        <div class="action-card">
+                            <i class="fa-solid fa-calendar-check"></i>
+                            <h4>My Bookings</h4>
+                            <p id="bookingsCount">0 bookings</p>
+                            <a href="booking.html#myBookings" class="btn-action">View Bookings</a>
+                        </div>
+                        <div class="action-card">
+                            <i class="fa-solid fa-heart"></i>
+                            <h4>Favorites</h4>
+                            <p id="favoritesCount">0 items</p>
+                            <a href="products.html#favorites" class="btn-action">View Favorites</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>CopyRight &copy; All rights reserved | Made by
+            <a href="#">Eng.Seif El-deen</a>
+        </p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+
+</html>

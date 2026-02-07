@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Food Lover</title>
+    <link rel="stylesheet" href="Css/Restaurant.css">
+    <link rel="stylesheet" href="Css/products.css">
+    <link rel="icon" href="img/restaurant logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <header id="home">
+        <div class="navbar">
+            <img class="logo" src="img/logo.png" alt="">
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="Restaurant web.html#home">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="#" id="logoutBtn">Logout</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon-container">
+                <a href="#cart" class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Welcome to <span>Food Lover </span>Restaurant</h1>
+            <p>
+                Here you can find most delicious food in the world
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="products-section">
+            <div class="container">
+                <h2 class="section-title">Our Products</h2>
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="breakfast">Breakfast</button>
+                    <button class="filter-btn" data-category="lunch">Lunch</button>
+                    <button class="filter-btn" data-category="dinner">Dinner</button>
+                    <button class="filter-btn" data-category="dessert">Dessert</button>
+                </div>
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Section -->
+        <section id="cart" class="cart-section">
+            <div class="container">
+                <h2 class="section-title">Shopping Cart</h2>
+                <div class="cart-content">
+                    <div class="cart-items" id="cartItems">
+                        <p class="empty-cart">Cart is empty</p>
+                    </div>
+                    <div class="cart-summary">
+                        <div class="summary-item">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">0.00</span> <span>EGP</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Tax (14%):</span>
+                            <span id="tax">0.00</span> <span>EGP</span>
+                        </div>
+                        <div class="summary-item total">
+                            <span>Total:</span>
+                            <span id="total">0.00</span> <span>EGP</span>
+                        </div>
+                        <button class="btn-checkout" id="checkoutBtn">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Orders Section -->
+        <section id="orders" class="orders-section">
+            <div class="container">
+                <h2 class="section-title">My Orders</h2>
+                <div class="orders-list" id="ordersList">
+                    <p class="empty-orders">No previous orders</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>CopyRight &copy; All rights reserved | Made by
+            <a href="#">Eng.Seif El-deen</a>
+        </p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/products.js"></script>
+</body>
+
+</html>

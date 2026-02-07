@@ -1,0 +1,1261 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* header  */
+
+header {
+    height: 100vh;
+    position: relative;
+    background-image: url(../img/home_bg.jpeg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header * {
+    z-index: 2;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.4;
+}
+
+header .navbar img {
+    width: 100px;
+    transition: 1s;
+    animation: animate 2s ease-in-out;
+    animation-direction: alternate;
+    cursor: pointer;
+}
+
+@keyframes animate {
+    50% {
+        transform: scale(2) rotateY(360deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 15px 10px; */
+}
+
+ul {
+    list-style: none;
+}
+
+header .navbar ul li a {
+    text-decoration: none;
+    padding-bottom: 5px;
+    font-weight: 600;
+    color: white;
+}
+
+.navbar {
+    /* background-color: red; */
+    margin: 0px 150px;
+}
+
+header .navbar {
+    position: relative;
+}
+
+header .navbar ul {
+    display: flex;
+    align-items: center;
+}
+
+header .navbar ul li {
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-size: 18px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+header .navbar ul li a {
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+header .navbar ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: orange;
+    transition: width 0.3s ease;
+}
+
+header .navbar ul li:hover a::after {
+    width: 100%;
+}
+
+header .navbar ul li:hover {
+    border-bottom: none;
+}
+
+header .navbar ul li a.active {
+    color: orange;
+}
+
+header .navbar ul li a.active::after {
+    width: 100%;
+}
+
+.cart-icon-container {
+    position: relative;
+    margin-right: 20px;
+}
+
+.cart-icon {
+    position: relative;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: orange;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.content {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    position: relative;
+    /* background-color: green; */
+}
+
+.banner-text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    text-align: center;
+    width: 100%;
+}
+
+.banner-text h1 {
+    font-size: 48px;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    margin: 0;
+    animation: fadeInDown 1s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+.rate-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+.rate-btn-banner {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0;
+}
+
+.rate-btn-banner i {
+    font-size: 18px;
+}
+
+.content * {
+    padding: 10px;
+}
+
+.content h1 {
+    font-size: 40px;
+    color: white;
+}
+
+.content p {
+    font-size: 20px;
+    color: white;
+}
+
+.content a {
+    margin-top: 40px;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px 55px;
+    color: white;
+    border: 1px white solid;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.content a:hover {
+    background-color: orange;
+    border: none;
+    font-weight: 200;
+    letter-spacing: 5px;
+}
+
+.content span {
+    color: #e4b95b;
+}
+
+/* about */
+
+main #about {
+    height: 80vh;
+}
+
+main #about,
+main #menue,
+main #day-time {
+    margin: 50px 20px;
+    padding: 25px;
+    /* background-color: red; */
+}
+
+main #about .container .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main #about .container .title h2,
+main #menue .container .title h2 {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    color: #696868;
+}
+
+main #about .container .title p,
+main #menue .container .title p {
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+}
+
+main #about .ab-content p {
+    line-height: 1.4;
+    color: #9a9a9a;
+}
+
+main #about .ab-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+main #about .about-content p {
+    font-size: 21px;
+    margin-left: 150px;
+    width: 740px;
+}
+
+main #about .ab-content img {
+    margin-top: 7rem;
+    margin-right: 10%;
+}
+
+main #about .ab-content a {
+    display: inline-block;
+    margin-left: 16%;
+    margin-top: 30px;
+    padding: 16px 62px;
+    /* border: 1px red solid; */
+    border-radius: 50px;
+    text-decoration: none;
+    background-color: #9a9a9a;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.5s;
+    letter-spacing: 2px;
+
+}
+
+main #about .ab-content a:hover {
+    background-color: #e4b95b;
+    transform: scale(1.1);
+    /* color: black; */
+}
+
+/* menue  */
+
+main #offer {
+    margin: 10px;
+    padding: 10px;
+    /* height: 80vh; */
+    /* background-color: red; */
+    background-image: url(../img/offer-background.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main .container .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main #offer h2 {
+    font-size: 40px;
+    font-family: sans-serif;
+    margin: 60px 0px 15px;
+    color: orange;
+    text-transform: capitalize;
+}
+
+main #offer .container .title p {
+    color: white;
+}
+
+main #offer .container .offers {
+    margin: 4em 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main #offer .container .offers .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0px;
+    padding: 10px;
+}
+
+main #offer .container .offers .card h3 {
+    font-size: 30px;
+    color: white;
+    padding: 15px;
+    margin: 10px 0px 10px;
+    text-transform: capitalize;
+}
+
+main #offer .container .offers .card p {
+    color: rgba(255, 255, 255, 0.699);
+    padding: 5px;
+    font-weight: 100;
+    text-transform: capitalize;
+    /* width: 450px; */
+}
+
+main #offer .container .offers .card p span {
+    color: orange;
+    font-weight: 500;
+    padding: 5px;
+    font-size: 20px;
+}
+
+main #offer .container .offers .card img {
+    transition: 0.8s ease-in-out;
+    cursor: pointer;
+}
+
+main #offer .container .offers .card .offer:hover img {
+    transform: rotateY(360deg) scale(1.2);
+
+}
+
+main #offer .container .offers .card:hover h3 {
+    color: orange;
+}
+
+/* menue  */
+
+main #menue {
+    height: 120vh;
+}
+
+main #menue .container .title p {
+    color: #9a9a9a;
+}
+
+main #menue .container .items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main #menue .container .items .item {
+    display: flex;
+    padding: 10px;
+    margin: 20px 0px;
+}
+
+main #menue .container .items .item div {
+    padding: 10px;
+    margin: 10px;
+}
+
+main #menue .container .items .item div h3 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    color: orange;
+    border-bottom: 1px #c2bdbd dashed;
+    padding: 0px 0px 10px;
+}
+
+main #menue .container .items .item div p {
+    color: #696868;
+    font-weight: 300;
+    font-size: 15px;
+    padding: 5px;
+    margin: 10px 0px;
+    width: 333px;
+    height: 20px;
+}
+
+main #menue .container a,
+main #contact .con-content .l-inf button {
+    display: inline-block;
+    margin-left: 42%;
+    padding: 20px 40px;
+    border-radius: 50px;
+    background-color: orange;
+    color: white;
+    border: none;
+    transition: 0.6s;
+    text-decoration: none;
+}
+
+main #menue .container a:hover,
+main #gallary button:hover {
+    background-color: transparent;
+    border: 1px orange solid;
+    color: orange;
+}
+
+/* day time  */
+
+main #day-time {
+    height: 20vh;
+    background: url(../img/daytime_bg.jpeg) center center/cover fixed;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+
+}
+
+main .contain .items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 30px;
+    /* margin: 30px; */
+}
+
+main .contain .items .item img {
+    width: 100px;
+    padding: 5px;
+    margin: 0px 30px;
+}
+
+main .contain .items .item {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    margin: 10px 30px;
+}
+
+main .contain .items .item h3 {
+    color: white;
+    font-size: 30px;
+    /* padding: 10px; */
+    margin: 10px 0px;
+    font-family: sans-serif;
+}
+
+
+main .contain .items .item .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .contain .items .item .title p {
+    color: white;
+    font-size: 18px;
+}
+
+/* gallary  */
+
+main #gallary {
+    height: 80vh;
+    background: url(../img/offer-background.jpg) center center/cover fixed;
+}
+
+main #gallary .g-content .g-imgs {
+    padding: 30px;
+    margin: 30px;
+    width: 100%;
+}
+
+main #gallary .g-content {
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    align-items: center;
+    padding-bottom: 0;
+}
+
+main #gallary .g-content .g-imgs img {
+    width: 280px;
+    height: 200px;
+    border-radius: 15px;
+    margin: 20px;
+    columns: 1;
+    animation: animation-1 3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+main #gallary .g-content .title h2 {
+    padding: 20px;
+    margin: 40px;
+    color: white;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    /* letter-spacing: 10px; */
+    text-transform: capitalize;
+    animation: animation 3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+@keyframes animation {
+    0% {
+        letter-spacing: 0px;
+        transform: scale(1);
+        color: orange;
+    }
+
+    50% {
+        color: yellow;
+    }
+
+    to {
+        letter-spacing: 15px;
+        transform: scale(1.3);
+        color: #e4b95b;
+    }
+}
+
+@keyframes animation-1 {
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+main .g-content {
+    padding: 10vh 0px;
+}
+
+main #gallary button {
+    padding: 20px 50px;
+    border: none;
+    font-size: 17px;
+    background-color: #e4b95b;
+    margin: -50px 0px 0px 45%;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.7s ease-out;
+    cursor: pointer;
+}
+
+/* contact  */
+
+main #contact {
+    height: 60vh;
+}
+
+main #contact .con-content {
+    margin: 100px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main #contact .con-content .address h2,
+main #contact .con-content .working-hou h2,
+main #contact .con-content .fol-us h2 {
+    font-size: 30px;
+    font-family: emoji;
+    padding: 20px;
+    margin: 10px 0px 0px 5px;
+}
+
+main #contact .con-content .address p,
+main #contact .con-content .working-hou p {
+    font-size: 20px;
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    padding: 3px 0px 0px 20px;
+    color: #9a9a9a;
+}
+
+main #contact .con-content .follow a {
+    margin: 0px 10px;
+}
+
+main #contact .con-content .follow a:hover i {
+    background-color: orange;
+    color: #696868;
+}
+
+main #contact .con-content .follow a i {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    /* align-items: center; */
+    padding: 15px;
+    background-color: #696868;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    transition: 0.3s;
+    margin: -38px -20px 0px -21px;
+    transition: 0.4s;
+}
+
+main #contact .con-content .follow a i:hover {
+    transform: scale(1.3);
+}
+
+main #contact .con-content .follow .move-lin {
+    margin: -13px 0px 0px 43px;
+}
+
+main #contact .con-content .r-inf div,
+main #contact .con-content .l-inf div {
+    padding: 10px;
+    margin: 10px;
+}
+
+main #contact .con-content .l-inf div input,
+main #contact .con-content .l-inf div textarea {
+    width: 400px;
+    padding: 20px;
+    background-color: rgb(255, 242, 216);
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    transition: 0.5s;
+}
+
+main #contact .con-content .l-inf div input::placeholder,
+main #contact .con-content .l-inf div textarea::placeholder {
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 5px;
+}
+
+main #contact .con-content .l-inf div input:focus {
+    background-color: transparent;
+    border: 1px orange solid;
+}
+
+main #contact .con-content .l-inf button {
+    margin-left: 28%;
+}
+
+
+main #contact .con-content .l-inf button:hover {
+    transform: scale(1.3);
+    border-color: transparent;
+    background-color: transparent;
+    border-bottom: 2px orange solid;
+    color: orange;
+    cursor: pointer;
+}
+
+main #contact .con-content .address i {
+    padding: 5px;
+    color: orange
+}
+
+footer {
+    background-color: #383848;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    color: orange;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1000;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Responsive Design */
+
+/* Tablet and below (1024px and below) */
+@media (max-width: 1024px) {
+    .navbar {
+        margin: 0px 50px;
+    }
+
+    main #about .about-content p {
+        margin-left: 50px;
+        width: 90%;
+    }
+
+    main #about .ab-content img {
+        margin-right: 5%;
+        width: 300px;
+    }
+
+    main #menue .container .items {
+        flex-direction: column;
+    }
+
+    main #menue .container .items .r-items,
+    main #menue .container .items .l-items {
+        width: 100%;
+    }
+
+    main #menue .container a {
+        margin-left: 35%;
+    }
+
+    main #contact .con-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    main #contact .con-content .l-inf div input,
+    main #contact .con-content .l-inf div textarea {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    main #contact .con-content .l-inf button {
+        margin-left: 20%;
+    }
+}
+
+/* Tablet (768px to 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    header .navbar ul li {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    .content h1 {
+        font-size: 35px;
+    }
+
+    .content p {
+        font-size: 18px;
+    }
+
+    main #about .ab-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    main #about .ab-content img {
+        margin-top: 0;
+        margin-right: 0;
+    }
+
+    main #about .about-content p {
+        margin-left: 0;
+        width: 90%;
+        text-align: center;
+    }
+
+    main #about .ab-content a {
+        margin-left: 0;
+        display: block;
+        text-align: center;
+        width: fit-content;
+        margin: 30px auto;
+    }
+
+    main #offer .container .offers {
+        flex-wrap: wrap;
+    }
+
+    main #gallary .g-content .g-imgs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    main #gallary .g-content .g-imgs img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    main #gallary button {
+        margin-left: 40%;
+    }
+}
+
+/* Mobile (768px and below) */
+@media (max-width: 768px) {
+    /* Header and Navbar */
+    .navbar {
+        margin: 0px 20px;
+        padding: 10px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    header .navbar nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.95);
+        transition: right 0.3s ease;
+        z-index: 999;
+        padding-top: 80px;
+    }
+
+    header .navbar nav.active {
+        right: 0;
+    }
+
+    header .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    header .navbar ul li {
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    header .navbar ul li:hover {
+        border-bottom: none;
+        background-color: rgba(255, 165, 0, 0.2);
+    }
+
+    header .navbar ul li a::after {
+        display: none;
+    }
+
+    header .navbar img {
+        width: 80px;
+    }
+
+    /* Header Content */
+    header {
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .content {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .content h1 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .content a {
+        padding: 12px 40px;
+        font-size: 14px;
+    }
+
+    /* About Section */
+    main #about {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    main #about .container .title h2,
+    main #menue .container .title h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    main #about .container .title p,
+    main #menue .container .title p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    main #about .ab-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    main #about .ab-content img {
+        width: 100%;
+        max-width: 400px;
+        margin-top: 0;
+        margin-right: 0;
+    }
+
+    main #about .about-content p {
+        margin-left: 0;
+        width: 100%;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    main #about .ab-content a {
+        margin-left: 0;
+        display: block;
+        text-align: center;
+        width: fit-content;
+        margin: 30px auto;
+        padding: 14px 50px;
+    }
+
+    /* Offer Section */
+    main #offer {
+        padding: 40px 20px;
+    }
+
+    main #offer h2 {
+        font-size: 30px;
+    }
+
+    main #offer .container .offers {
+        flex-direction: column;
+        margin: 2em 0;
+    }
+
+    main #offer .container .offers .card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    main #offer .container .offers .card img {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    main #offer .container .offers .card h3 {
+        font-size: 24px;
+    }
+
+    /* Menu Section */
+    main #menue {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    main #menue .container .items {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    main #menue .container .items .r-items,
+    main #menue .container .items .l-items {
+        width: 100%;
+    }
+
+    main #menue .container .items .item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    main #menue .container .items .item img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+
+    main #menue .container .items .item div {
+        width: 100%;
+    }
+
+    main #menue .container .items .item div h3 {
+        justify-content: center;
+        font-size: 18px;
+        padding: 10px 0;
+    }
+
+    main #menue .container .items .item div p {
+        width: 100%;
+        height: auto;
+        font-size: 14px;
+    }
+
+    main #menue .container a {
+        margin-left: 0;
+        display: block;
+        text-align: center;
+        width: fit-content;
+        margin: 30px auto;
+        padding: 15px 35px;
+    }
+
+    /* Day Time Section */
+    main #day-time {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    main .contain .items {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    main .contain .items .item {
+        flex-direction: row;
+        padding: 15px;
+    }
+
+    main .contain .items .item img {
+        width: 80px;
+        margin: 0 20px;
+    }
+
+    main .contain .items .item h3 {
+        font-size: 24px;
+    }
+
+    main .contain .items .item .title p {
+        font-size: 16px;
+    }
+
+    /* Gallery Section */
+    main #gallary {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    main #gallary .g-content .title h2 {
+        font-size: 30px;
+        margin: 20px 0;
+    }
+
+    main #gallary .g-content .g-imgs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 20px 10px;
+        margin: 20px 0;
+    }
+
+    main #gallary .g-content .g-imgs img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        margin: 0;
+    }
+
+    main #gallary button {
+        margin: 20px auto;
+        display: block;
+        padding: 15px 40px;
+    }
+
+    /* Contact Section */
+    main #contact {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    main #contact .con-content {
+        flex-direction: column;
+        margin: 40px 0;
+        gap: 40px;
+    }
+
+    main #contact .con-content .r-inf {
+        width: 100%;
+        text-align: center;
+    }
+
+    main #contact .con-content .address h2,
+    main #contact .con-content .working-hou h2,
+    main #contact .con-content .fol-us h2 {
+        font-size: 24px;
+        margin: 20px 0;
+    }
+
+    main #contact .con-content .address p,
+    main #contact .con-content .working-hou p {
+        font-size: 16px;
+        padding: 5px 0;
+    }
+
+    main #contact .con-content .follow .move-lin {
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    main #contact .con-content .l-inf {
+        width: 100%;
+    }
+
+    main #contact .con-content .l-inf form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main #contact .con-content .l-inf div {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    main #contact .con-content .l-inf div input,
+    main #contact .con-content .l-inf div textarea {
+        width: 100%;
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    main #contact .con-content .l-inf button {
+        margin-left: 0;
+        padding: 15px 40px;
+        width: fit-content;
+    }
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+    .navbar {
+        margin: 0px 10px;
+    }
+
+    header .navbar img {
+        width: 60px;
+    }
+
+    .content h1 {
+        font-size: 24px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    main #about .container .title h2,
+    main #menue .container .title h2,
+    main #offer h2,
+    main #gallary .g-content .title h2 {
+        font-size: 24px;
+    }
+
+    main #gallary .g-content .g-imgs {
+        grid-template-columns: 1fr;
+    }
+
+    main #contact .con-content .l-inf div {
+        max-width: 100%;
+    }
+}

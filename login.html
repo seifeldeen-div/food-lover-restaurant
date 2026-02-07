@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Food Lover</title>
+    <link rel="stylesheet" href="Css/Restaurant.css">
+    <link rel="stylesheet" href="Css/auth.css">
+    <link rel="icon" href="img/restaurant logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="auth-container">
+        <div class="auth-box">
+            <div class="auth-header">
+                <img src="img/logo.png" alt="Logo" class="auth-logo">
+                <h2>Login</h2>
+                <p>Welcome to Food Lover Restaurant</p>
+            </div>
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="password"><i class="fa-solid fa-lock"></i> Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+                </div>
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn-auth">Login</button>
+                <div class="auth-footer">
+                    <p>Don't have an account? <a href="register.html">Sign up now</a></p>
+                    <a href="Restaurant web.html" class="back-home"><i class="fa-solid fa-home"></i> Back to Home</a>
+                    <a href="learn-more.html#rate" class="rate-us-link"><i class="fa-solid fa-star"></i> Rate Us</a>
+                </div>
+            </form>
+            <div id="errorMessage" class="error-message"></div>
+        </div>
+    </div>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
