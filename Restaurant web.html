@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="Css/Restaurant.css">
+    <link rel="icon" href="img/restaurant logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- header start -->
+    <header id="home">
+        <div class="navbar">
+            <img class="logo" src="img/logo.png" alt="">
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="#home"> Home </a></li>
+                    <li><a href="#about"> About </a></li>
+                    <li><a href="#menue"> Menue </a></li>
+                    <li><a href="#gallary"> Gallary </a></li>
+                    <li><a href="#contact"> Contact </a></li>
+                    <li><a href="login.html" id="loginLink">Login</a></li>
+                    <li><a href="profile.html" id="profileLink" style="display: none;">Profile</a></li>
+                    <li><a href="products.html" id="productsLink" style="display: none;">Products</a></li>
+                    <li><a href="booking.html" id="bookingLink" style="display: none;">Booking</a></li>
+                    <li><a href="#" id="logoutLink" style="display: none;">Logout</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon-container">
+                <a href="products.html#cart" class="cart-icon" id="cartLink" style="display: none;">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Welcome to <span>Food Lover </span>Restaurant</h1>
+            <p>
+                Here you can find most delicious food in the world
+            </p>
+            <a class="btn btn-prime" href="learn-more.html">Learn More</a>
+            <a class="btn btn-prime" href="booking.html" style="margin-top: 15px;">Book a table</a>
+            <a class="btn btn-prime" href="products.html" style="margin-top: 15px;">Shop Now</a>
+            <a class="btn btn-prime rate-btn" href="learn-more.html#rate" style="margin-top: 15px;">Rate Us</a>
+        </div>
+    </header>
+    <!-- header end -->
+    <main>
+        <!-- about start -->
+        <section id="about">
+            <div class="container">
+                <div class="title">
+                    <h2>The food lover history</h2>
+                    <p>More about 25+ years of experience</p>
+                </div>
+                <!-- about end -->
+                <div class="ab-content">
+                    <div class="about-content">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quod nulla perferendis cum aperiam libero provident
+                            sapiente fugit. Vel, neque saepe?
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum
+                            suscipit ipsum incidunt dolor quisquam maiores quod eligendi officia!
+                            Velit blanditiis perspiciatis nulla iusto debitis quia aperiam distinctio
+                            amet ad eligendi!
+                        </p>
+                        <br>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quod nulla perferendis cum aperiam libero provident
+                            sapiente fugit. Vel, neque saepe?
+                        </p>
+                        <a href="learn-more.html">LEARN MORE</a>
+                    </div>
+                    <img src="img/about_img.png" alt="">
+                </div>
+            </div>
+        </section>
+        <!-- about end -->
+        <!-- offer start -->
+        <section id="offer">
+            <div class="container">
+                <div class="title">
+                    <h2>Our special offers</h2>
+                    <p>More about 25+ years of experience</p>
+                </div>
+                <div class="offers">
+                    <div class="card">
+                        <div class="offer">
+                            <img src="img/offer1.png" alt="">
+                        </div>
+                        <h3>Quattro pasta</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit. At, illo.
+                        </p>
+                        <p><del>$55.00</del> <span class="off-price">$18.00</span></p>
+                    </div>
+
+                    <div class="card">
+                        <div class="offer">
+                            <img src="img/offer2.png" alt="">
+                        </div>
+                        <h3>Vegetarian pasta</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit. At, illo.
+                        </p>
+                        <p><del>$55.00</del> <span class="off-price">$18.00</span></p>
+                    </div>
+                    <div class="card">
+                        <div class="offer">
+                            <img src="img/offer3.png" alt="">
+                        </div>
+                        <h3>Gluten-free pasta</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit. At, illo.
+                        </p>
+                        <p><del>$55.00</del> <span class="off-price">$18.00</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- offer end -->
+        <!-- menue start  -->
+        <section id="menue">
+            <div class="container">
+                <div class="title">
+                    <h2>Our special menue</h2>
+                    <p>Order to and get three for free</p>
+                </div>
+                <div class="items">
+                    <div class="r-items">
+                        <div class="item">
+                            <img src="img/food1.png" alt="">
+                            <div>
+                                <h3>Lasal cheese <span>$118.00</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Similique, excepturi?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/food2.png" alt="">
+                            <div>
+                                <h3>Jumbo crab shrimp <span>$155.00</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Similique, excepturi?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/food3.png" alt="">
+                            <div>
+                                <h3>Koktail juise <span>$105.00</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Similique, excepturi?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/food4.png" alt="">
+                            <div>
+                                <h3>Capo Steck <span>$300.00</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Similique, excepturi?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/food5.png" alt="">
+                            <div>
+                                <h3>Organic fruit salad <span>$30.00</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Similique, excepturi?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/food6.png" alt="">
+                            <div>
+                                <h3>Cheese pizza <span>$15.00</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Similique, excepturi?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l-items">
+                        <div class="item">
+                            <img src="img/food7.jpeg" alt="" style="width: 100px; border-radius: 100%;">
+                            <div>
+                                <h3>Kofta Meat <span>$12.00</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Similique, excepturi?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/food8.jpeg" alt="" style="width: 100px; border-radius: 100%;">
+                            <div>
+                                <h3>Spanish pies <span>$60.00</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Similique, excepturi?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/food9.jpeg" alt="" style="width: 100px; border-radius: 100%;">
+                            <div>
+                                <h3>Cheese tost <span>$100.00</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Similique, excepturi?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/food1.png" alt="">
+                            <div>
+                                <h3>Fruite salad <span>$150.00</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Similique, excepturi?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/food5.png" alt="">
+                            <div>
+                                <h3>Chicken shawerma <span>$120.00</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Similique, excepturi?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/food6.png" alt="">
+                            <div>
+                                <h3>Mega Cheese pizza <span>$40.00</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Similique, excepturi?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">EXPLORE ALL MENUE</a>
+            </div>
+        </section>
+        <!-- menue end  -->
+        <!-- day time start  -->
+        <section id="day-time">
+            <div class="contain">
+                <div class="items">
+                    <div class="item">
+                        <img src="img/breckfastIcon.png" alt="">
+                        <div class="title">
+                            <h3>Breakfast</h3>
+                            <p>4:00 am to 7:00 pm</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="img/lunchIcon.png" alt="">
+                        <div class="title">
+                            <h3>Lunch</h3>
+                            <p>8:00 am to 10:00 pm</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="img/dinnerIcon.png" alt="">
+                        <div class="title">
+                            <h3>Dinner</h3>
+                            <p>9:00 pm to 1:00 am</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="img/dessertIcon.png" alt="">
+                        <div class="title">
+                            <h3>Dessert</h3>
+                            <p>All day</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- day time end  -->
+        <!-- Gallary start -->
+        <section id="gallary">
+            <div class="g-content">
+                <div class="title">
+                    <h2>Our food gallary</h2>
+                </div>
+                <div class="g-imgs">
+                    <img src="img/gallery1.jpeg" alt="">
+                    <img src="img/gallery2.jpeg" alt="">
+                    <img src="img/gallery3.jpeg" alt="">
+                    <img src="img/gallery4.jpeg" alt="">
+                    <img src="img/gallery5.jpeg" alt="">
+                    <img src="img/gallery5.jpeg" alt="">
+                    <img src="img/gallery6.jpeg" alt="">
+                    <img src="img/gallery6.jpeg" alt="">
+                </div>
+            </div>
+            <button>SEE MORE</button>
+        </section>
+        <!-- Gallary end -->
+        <!-- contact start  -->
+        <section id="contact">
+            <div class="con-content">
+                <div class="r-inf">
+                    <div class="address">
+                        <h2>ADRESS</h2>
+                        <p><i class="fa-solid fa-location-dot"></i>Hosary Mosque, 6 October, Egypt </p>
+                        <p><i class="fa-solid fa-phone"></i>Phone: 123456789</p>
+                        <p><i class="fa-solid fa-envelope"></i>support@foodlover.com</p>
+                    </div>
+                    <div class="working-hou">
+                        <h2>WORKING HOURS</h2>
+                        <P>8:00 am to 11:00pm on Weekdays</P>
+                        <P>11:00 am to 1:00pm on Weekends</P>
+                    </div>
+                    <div class="follow">
+                        <!-- links -->
+                        <div class="fol-us">
+                            <h2>Follow us</h2>
+                        </div>
+                        <div class="move-lin">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-inf">
+                    <form action="">
+                        <div class="name">
+                            <input type="text" name="" id="name" placeholder="Name">
+                        </div>
+                        <div class="adress">
+                            <input type="text" name="" id="adress" placeholder="Adress">
+                        </div>
+                        <div class="supj">
+                            <input type="text" name="" id="supj" placeholder="Subject">
+                        </div>
+                        <div class="message">
+                            <textarea name="" id="message" placeholder="Massage" style="height: 150px;"></textarea>
+                        </div>
+                        <div class="btn">
+                            <button>SEND MESSAGE</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- contact end  -->
+    </main>
+    <!-- footer  -->
+    <footer>
+        <p>CopyRight &copy; All rights reserved | Made by
+            <a href="#">Eng.Seif El-deen</a>
+        </p>
+    </footer>
+    <script src="js/app.js"></script>
+    <script>
+        // Update auth links based on login status
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentUser = getCurrentUser();
+            const loginLink = document.getElementById('loginLink');
+            const profileLink = document.getElementById('profileLink');
+            const productsLink = document.getElementById('productsLink');
+            const bookingLink = document.getElementById('bookingLink');
+            const logoutLink = document.getElementById('logoutLink');
+            const cartLink = document.getElementById('cartLink');
+
+            if (currentUser) {
+                if (loginLink) loginLink.style.display = 'none';
+                if (profileLink) profileLink.style.display = 'block';
+                if (productsLink) productsLink.style.display = 'block';
+                if (bookingLink) bookingLink.style.display = 'block';
+                if (logoutLink) {
+                    logoutLink.style.display = 'block';
+                    logoutLink.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        logout();
+                    });
+                }
+                if (cartLink) cartLink.style.display = 'block';
+            } else {
+                if (loginLink) loginLink.style.display = 'block';
+                if (profileLink) profileLink.style.display = 'none';
+                if (productsLink) productsLink.style.display = 'none';
+                if (bookingLink) bookingLink.style.display = 'none';
+                if (logoutLink) logoutLink.style.display = 'none';
+                if (cartLink) cartLink.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
