@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -191,6 +193,7 @@ header .navbar ul li a.active::after {
         opacity: 0;
         transform: translate(-50%, -20px);
     }
+
     to {
         opacity: 1;
         transform: translate(-50%, 0);
@@ -561,14 +564,46 @@ main #gallary .g-content {
     padding-bottom: 0;
 }
 
+main #gallary .g-content .g-imgs {
+    img:nth-child(1) {
+        animation: animation-1 2s ease-in-out infinite;
+    }
+
+    img:nth-child(2) {
+        animation: animation-1 2s 0.4s ease-in-out infinite;
+    }
+
+    img:nth-child(3) {
+        animation: animation-1 2s 0.8s ease-in-out infinite;
+    }
+
+    img:nth-child(4) {
+        animation: animation-1 2s 1.2s ease-in-out infinite;
+    }
+
+    img:nth-child(5) {
+        animation: animation-1 2s 1.6s ease-in-out infinite;
+    }
+
+    img:nth-child(6) {
+        animation: animation-1 2s 2s ease-in-out infinite;
+    }
+
+    img:nth-child(7) {
+        animation: animation-1 2s 2.4s ease-in-out infinite;
+    }
+
+    img:nth-child(8) {
+        animation: animation-1 2s 2.8s ease-in-out infinite;
+    }
+}
+
 main #gallary .g-content .g-imgs img {
     width: 280px;
     height: 200px;
     border-radius: 15px;
     margin: 20px;
     columns: 1;
-    animation: animation-1 3s ease-in-out infinite;
-    animation-direction: alternate;
 }
 
 main #gallary .g-content .title h2 {
@@ -603,12 +638,14 @@ main #gallary .g-content .title h2 {
 }
 
 @keyframes animation-1 {
-    from {
-        opacity: 0.2;
+
+    0%,
+    100% {
+        transform: translateY(0);
     }
 
-    to {
-        opacity: 1;
+    50% {
+        transform: translateY(-5px);
     }
 }
 
@@ -636,7 +673,7 @@ main #contact {
 }
 
 main #contact .con-content {
-    margin: 100px 0px;
+    /* margin: 100px 0px; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -647,8 +684,8 @@ main #contact .con-content .working-hou h2,
 main #contact .con-content .fol-us h2 {
     font-size: 30px;
     font-family: emoji;
-    padding: 20px;
-    margin: 10px 0px 0px 5px;
+    /* padding: 20px; */
+    /* margin: 10px 0px 0px 5px; */
 }
 
 main #contact .con-content .address p,
@@ -657,7 +694,7 @@ main #contact .con-content .working-hou p {
     font-weight: 300;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
-    padding: 3px 0px 0px 20px;
+    /* padding: 3px 0px 0px 20px; */
     color: #9a9a9a;
 }
 
@@ -695,7 +732,7 @@ main #contact .con-content .follow .move-lin {
 
 main #contact .con-content .r-inf div,
 main #contact .con-content .l-inf div {
-    padding: 10px;
+    /* padding: 10px; */
     margin: 10px;
 }
 
@@ -705,21 +742,29 @@ main #contact .con-content .l-inf div textarea {
     padding: 20px;
     background-color: rgb(255, 242, 216);
     border: none;
-    border-radius: 50px;
+    border-radius: 10px;
     outline: none;
     transition: 0.5s;
 }
 
 main #contact .con-content .l-inf div input::placeholder,
 main #contact .con-content .l-inf div textarea::placeholder {
-    text-align: center;
-    font-size: 15px;
-    letter-spacing: 5px;
+    /* text-align: center; */
+    font-size: 20px 50px;
+    /* letter-spacing: 5px; */
 }
 
 main #contact .con-content .l-inf div input:focus {
     background-color: transparent;
     border: 1px orange solid;
+}
+
+main #contact .con-content .l-inf form {
+    padding: 0 20px;
+
+    .btn {
+        text-align: center;
+    }
 }
 
 main #contact .con-content .l-inf button {
@@ -746,6 +791,10 @@ footer {
     text-align: center;
     padding: 10px;
     color: white;
+
+    p {
+        font-size: 13px;
+    }
 }
 
 footer a {
@@ -893,6 +942,7 @@ footer a {
 
 /* Mobile (768px and below) */
 @media (max-width: 768px) {
+
     /* Header and Navbar */
     .navbar {
         margin: 0px 20px;
@@ -1164,7 +1214,7 @@ footer a {
     /* Contact Section */
     main #contact {
         height: auto;
-        padding: 40px 20px;
+        /* padding: 40px 20px; */
     }
 
     main #contact .con-content {
