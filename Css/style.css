@@ -256,7 +256,7 @@ header .navbar ul li a.active::after {
 /* about */
 
 main #about {
-    height: 80vh;
+    /* height: 80vh; */
 }
 
 main #about,
@@ -423,7 +423,7 @@ main #offer .container .offers .card:hover h3 {
 /* menue  */
 
 main #menue {
-    height: 120vh;
+    /* height: 120vh; */
 }
 
 main #menue .container .title p {
@@ -491,7 +491,7 @@ main #gallary button:hover {
 /* day time  */
 
 main #day-time {
-    height: 20vh;
+    height: 25vh;
     background: url(../img/daytime_bg.jpeg) center center/cover fixed;
     margin-bottom: 0px;
     margin-left: 0px;
@@ -546,13 +546,18 @@ main .contain .items .item .title p {
 /* gallary  */
 
 main #gallary {
-    height: 80vh;
+    /* height: 80vh; */
+    padding-bottom: 20px;
     background: url(../img/offer-background.jpg) center center/cover fixed;
 }
 
 main #gallary .g-content .g-imgs {
-    padding: 30px;
-    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin: 15px;
     width: 100%;
 }
 
@@ -654,11 +659,12 @@ main .g-content {
 }
 
 main #gallary button {
+    display: block;
     padding: 20px 50px;
     border: none;
     font-size: 17px;
     background-color: #e4b95b;
-    margin: -50px 0px 0px 45%;
+    margin: 20px auto;
     border-radius: 20px;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -669,28 +675,29 @@ main #gallary button {
 /* contact  */
 
 main #contact {
-    height: 60vh;
+    /* height: 60vh; */
+    margin: 30px 0;
 }
 
 main #contact .con-content {
     /* margin: 100px 0px; */
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
 }
 
 main #contact .con-content .address h2,
 main #contact .con-content .working-hou h2,
 main #contact .con-content .fol-us h2 {
     font-size: 30px;
-    font-family: emoji;
+    font-family: sans-serif;
     /* padding: 20px; */
     /* margin: 10px 0px 0px 5px; */
 }
 
 main #contact .con-content .address p,
 main #contact .con-content .working-hou p {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 300;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
@@ -727,7 +734,7 @@ main #contact .con-content .follow a i:hover {
 }
 
 main #contact .con-content .follow .move-lin {
-    margin: -13px 0px 0px 43px;
+    margin: 25px 15px;
 }
 
 main #contact .con-content .r-inf div,
@@ -763,7 +770,15 @@ main #contact .con-content .l-inf form {
     padding: 0 20px;
 
     .btn {
-        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+main #contact .con-content .r-inf button {
+    .fol-us {
+        p {
+            margin-top: 70px;
+        }
     }
 }
 
